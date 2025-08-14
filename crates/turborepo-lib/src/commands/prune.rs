@@ -59,6 +59,10 @@ lazy_static! {
     static ref ADDITIONAL_FILES: Vec<(&'static RelativeUnixPath, Option<CopyDestination>)> = vec![
         (RelativeUnixPath::new(".gitignore").unwrap(), None),
         (
+            RelativeUnixPath::new(".pnpmfile.cjs").unwrap(),
+            Some(CopyDestination::Docker)
+        ),
+        (
             RelativeUnixPath::new(".npmrc").unwrap(),
             Some(CopyDestination::Docker)
         ),
